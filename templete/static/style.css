@@ -2,7 +2,7 @@
 *,
 *::before,
 *::after {
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
   box-sizing: border-box;
 }
@@ -23,8 +23,20 @@ html, body {
   left: 0;
   right: 0;
   z-index: 1000;
-  position: relative;
 }
+/* Header styles */
+#header {
+  background-color: black;
+  position: fixed; /* Cố định header ở trên cùng */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Đảm bảo header nằm trên slider */
+  display: flex;
+  align-items: center;
+  /* padding: 0 10px; */
+}
+
 
 #nav {
   display: flex;
@@ -35,6 +47,7 @@ html, body {
 
 #nav li {
   position: relative;
+  text-transform: uppercase;
 }
 
 #nav a {
@@ -87,7 +100,7 @@ html, body {
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
-  padding: 5px 10px;
+  padding: 12px 24px;
   cursor: pointer;
   z-index: 20;
 }
@@ -104,13 +117,30 @@ html, body {
 }
 
 #slider {
+  position: relative;
   margin-top: 46px;
-  height: 300px; /* Hoặc dùng padding-top nếu muốn tỷ lệ */
-  background-color: lightblue; /* Đặt màu nền để kiểm tra */
-  text-align: center; /* Căn giữa nội dung nếu cần */
-  display: flex; /* Căn giữa nội dung */
-  align-items: center;
-  justify-content: center;
+  padding-top: 50%;
+  background: url('/templete/static/img/st1.jpg')  top center / cover no-repeat;/* Đặt màu nền để kiểm tra */
+  object-fit: contain;
+  background-size: cover; /* Giữ nguyên tỷ lệ ảnh và không bị cắt */
+  /* border: 1px solid black; / */
 }
 
+#slider .text-content{
+  position: absolute;
+  bottom: 10px;
+  color: aliceblue;
+  /* transform: translate(150%); */
+  font-size: 10px;
+  right: 40px;
+}
 
+#slider  .text-heading{
+  text-align: center;
+  
+}
+ #slider .text-description{
+  font-size: small;
+  
+
+ }
