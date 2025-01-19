@@ -1,0 +1,116 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+
+
+/* Header styles */
+#header {
+  background-color: black;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  position: relative;
+}
+
+#nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav li {
+  position: relative;
+}
+
+#nav a {
+  display: block;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Submenu styles */
+#subnav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#subnav li a {
+  padding: 10px 20px;
+  color: black;
+}
+
+#subnav li a:hover {
+  background-color: #ccc;
+}
+
+#nav li:hover #subnav {
+  display: block;
+}
+
+#nav .nav-arrow-down {
+  font-size: 14px;
+}
+
+/* Search Button */
+.search-button {
+  font-size: 16px;
+  color: white;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+#header .search-button:hover {
+  background-color: red;
+  color: black;
+}
+
+/* Icon Search Styles */
+.search .ti-search {
+  font-size: 20px;
+  line-height: 46px;
+}
+
+#slider {
+  margin-top: 46px;
+  height: 300px; /* Hoặc dùng padding-top nếu muốn tỷ lệ */
+  background-color: lightblue; /* Đặt màu nền để kiểm tra */
+  text-align: center; /* Căn giữa nội dung nếu cần */
+  display: flex; /* Căn giữa nội dung */
+  align-items: center;
+  justify-content: center;
+}
+
+
